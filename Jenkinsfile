@@ -16,9 +16,9 @@ pipeline{
                 withSonarQubeEnv('sonar_qube') {
                 sh """mvn clean verify sonar:sonar \
                        -Dsonar.projectKey=Anil135425_springspetic \
-                       -Dsonar.organization=Anil135425 \
+                       -Dsonar.organization=anil135425 \
                        -Dsonar.host.url=https://sonarcloud.io/ \
-                       -Dsonar.login=80310547bec565cf2243aae0ad7701f6bbe985fe"""
+                       -Dsonar.login=$SONAR"""
                 }
                 }
             }
