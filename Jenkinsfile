@@ -14,7 +14,7 @@ pipeline{
             steps{
                 withCredentials([string(credentialsId: 'sonar_id', variable: 'SONAR_TOKEN')]) {
                 withSonarQubeEnv('sonar_qube') {
-                sh """"mvn clean verify sonar:sonar \
+                sh """mvn clean verify sonar:sonar \
                        -Dsonar.projectKey=Anil135425_springspetic \
                        -Dsonar.organization=Anil135425 \
                        -Dsonar.host.url=https://sonarcloud.io/ \
